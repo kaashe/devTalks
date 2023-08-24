@@ -1,0 +1,45 @@
+.container{
+
+}
+.mainTitle{
+    font-size: 100px;
+}
+.selectTitle{
+    margin: 20px 0px;
+}
+.items{
+    display: flex;
+    gap: 50px;
+}
+.item{
+    border: 2px solid #bbb;
+    border-radius: 5px;
+    width: 280px;
+    height: 400px;
+    position: relative;
+}
+.item:hover{
+    opacity: 0.9;
+}
+.item:nth-child(1){
+    background: url('/illustration.png');
+    background-size: cover;
+}
+.item:nth-child(2){
+    background: url('/websites.jpg');
+    background-size: cover;
+}
+.item:nth-child(3){
+    background: url('/apps.jpg');
+    background-size: cover;
+}
+.title{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.item:hover .title{
+ color: #30d39d;
+}

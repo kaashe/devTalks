@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 50px;
+}
+.img{
+    object-fit: contain;
+}
+.item{
+display: flex;
+flex-direction: column;
+gap: 40px;
+justify-content: center;
+}
+.title{
+    margin-bottom: 10px;
+}
+.desc{
+    font-size: 18px;
+    color: #999;
+}

@@ -9,6 +9,16 @@ const Navbar = () => {
       url: "/",
     },
     {
+      id: 6,
+      title: "About",
+      url: "/about",
+    },
+    {
+      id: 4,
+      title: "Contact",
+      url: "/contact",
+    },
+    {
       id: 2,
       title: "Portfolio",
       url: "/portfolio",
@@ -18,21 +28,13 @@ const Navbar = () => {
       title: "Blog",
       url: "/blog",
     },
-    {
-      id: 4,
-      title: "Contact",
-      url: "/contact",
-    },
+   
     {
       id: 5,
       title: "Dashboard",
       url: "/dashboard",
     },
-    {
-      id: 6,
-      title: "About",
-      url: "/about",
-    },
+   
   ];
   return (
     <div className={styles.container}>
