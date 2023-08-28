@@ -19,5 +19,9 @@ justify-content: center;
 }
 .desc{
     font-size: 18px;
-    color: #999;
+    color: #bbb;
+}
+.desklight{
+    font-size: 18px;
+    color: black;
 }

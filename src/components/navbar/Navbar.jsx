@@ -1,6 +1,10 @@
+'use client'
 import Link from "next/link";
-import React from "react";
-import styles from './navbar.module.css';
+import React, { useContext, useState } from "react";
+import styles from "./navbar.module.css";
+import { Switch, IconButton } from "@mui/material";
+import { Nightlight as NightIcon, WbSunny as DayIcon } from "@mui/icons-material";
+import { ThemeContext } from "@/context/ThemeContext";
 const Navbar = () => {
   const links = [
     {
@@ -28,22 +32,41 @@ const Navbar = () => {
       title: "Blog",
       url: "/blog",
     },
-   
+
     {
       id: 5,
       title: "Dashboard",
       url: "/dashboard",
     },
-   
   ];
+  const {toggle,mode} = useContext(ThemeContext);
+  const [darkTheme, setDarkTheme] = useState(false);
+
+  const handleThemeToggle = () => {
+    setDarkTheme((prevTheme) => !prevTheme);
+    // You can also apply your theme switching logic here
+  };
   return (
     <div className={styles.container}>
-      <Link href={"/"} className={styles.logo}>devTalks</Link>
+      <Link href={"/"} className={styles.logo}>
+        devTalks
+      </Link>
+      
       <div className={styles.links}>
-        {links?.map(link=>(
-          <Link key={link.id} href={link.url}>{link.title}</Link>
+      <IconButton
+          color="default"
+          onClick={toggle}
+          className={styles.themeSwitch}
+        >
+          {mode ==='dark' ? <DayIcon sx={{color:'white'}} /> : <NightIcon sx={{color:'black'}} />}
+        </IconButton>
+        {links?.map((link) => (
+          <Link key={link.id} href={link.url}>
+            {link.title}
+          </Link>
         ))}
-      <button className={styles.logout}>Logout</button>
+   
+        <button className={styles.logout}>Logout</button>
       </div>
     </div>
   );

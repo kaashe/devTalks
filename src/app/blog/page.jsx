@@ -1,8 +1,11 @@
-import React from "react";
+'use client'
+import React, { useContext } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { ThemeContext } from "@/context/ThemeContext";
 const Blog = () => {
+  const {mode} = useContext(ThemeContext)
   return (
     <div>
       <Link href={"/blog/testId"} className={styles.container}>
@@ -17,7 +20,7 @@ const Blog = () => {
         <div className={styles.item}>
           <div className={styles.content}>
             <h1 className={styles.title}>Test</h1>
-            <p className={styles.desc}>
+            <p className={mode==='light'?styles.desklight:styles.desc}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
               temporibus commodi, cum at numquam delectus. Commodi officiis,
               voluptatem consectetur velit, reiciendis qui iusto quia impedit
@@ -38,7 +41,7 @@ const Blog = () => {
         <div className={styles.item}>
           <div className={styles.content}>
             <h1 className={styles.title}>Test</h1>
-            <p className={styles.desc}>
+            <p className={mode==='light'?styles.desklight:styles.desc}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
               temporibus commodi, cum at numquam delectus. Commodi officiis,
               voluptatem consectetur velit, reiciendis qui iusto quia impedit
@@ -59,7 +62,7 @@ const Blog = () => {
         <div className={styles.item}>
           <div className={styles.content}>
             <h1 className={styles.title}>Test</h1>
-            <p className={styles.desc}>
+            <p className={mode==='light'?styles.desklight:styles.desc}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
               temporibus commodi, cum at numquam delectus. Commodi officiis,
               voluptatem consectetur velit, reiciendis qui iusto quia impedit

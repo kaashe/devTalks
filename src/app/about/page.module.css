@@ -36,5 +36,12 @@
     font-size: 18px;
     font-weight: 300;
     text-align: justify;
-    color: rgb(245, 233, 210);
+    color: white;
+}
+
+.desklight{
+    font-size: 18px;
+    font-weight: 300;
+    text-align: justify;
+    color: black;
 }

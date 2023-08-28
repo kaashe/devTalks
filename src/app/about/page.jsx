@@ -1,10 +1,13 @@
-import React from "react";
+'use client'
+import React, { useContext } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import Button from "@/components/Button/Button";
+import { ThemeContext } from "@/context/ThemeContext";
 const imageUrl =
   "https://images.pexels.com/photos/1255372/pexels-photo-1255372.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 const About = () => {
+  const {mode} = useContext(ThemeContext);
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
@@ -25,7 +28,7 @@ const About = () => {
       <div className={styles.textContainer}>
         <div className={styles.item}>
           <h1 className={styles.title}>Who we are?</h1>
-          <p className={styles.desc}>
+          <p className={mode==='light'?styles.desklight:styles.desc}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
             accusamus consequatur explicabo vel corporis, in quisquam pariatur
             placeat autem iure sint vitae ipsum nobis, neque eligendi
@@ -40,7 +43,7 @@ const About = () => {
         </div>
         <div className={styles.item}>
           <h1 className={styles.title}>What we do?</h1>
-          <p className={styles.desc}>
+          <p className={mode==='light'?styles.desklight:styles.desc}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
             accusamus consequatur explicabo vel corporis, in quisquam pariatur
             placeat autem iure sint vitae ipsum nobis, neque eligendi
