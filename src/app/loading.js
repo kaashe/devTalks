@@ -1,11 +1,13 @@
-import React from 'react'
+// loading.js
+import React from 'react';
 
-const loading = () => {
+const Loading = () => {
   return (
-    <div>
-      Please wait
+    <div className="loading-container">
+      <div className="spinner"></div>
+      <p>Loading, please wait...</p>
     </div>
-  )
-}
+  );
+};
 
-export default loading
+export default Loading;
