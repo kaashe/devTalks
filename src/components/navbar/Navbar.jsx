@@ -60,7 +60,7 @@ const Navbar = () => {
           </Link>
         ))}
    
-        <button className={styles.logout}>Logout</button>
+        <button className={styles.logout}>Sign in</button>
       </div>
     </div>
   );
