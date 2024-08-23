@@ -32,12 +32,6 @@ const Navbar = () => {
       title: "Blog",
       url: "/blog",
     },
-
-    {
-      id: 5,
-      title: "Dashboard",
-      url: "/dashboard",
-    },
   ];
   const {toggle,mode} = useContext(ThemeContext);
   const [darkTheme, setDarkTheme] = useState(false);
